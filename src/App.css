@@ -16,3 +16,8 @@
   
   gap:2vh;
   }
+
+  .gig-container{
+    display:flex;
+    gap:1vh;
+  }

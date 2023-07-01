@@ -4,15 +4,16 @@ const CardContainer = styled.div`
   width: 100vw;
   display: flex;
   flex-direction: column;
-  height: 90vh;
-  justify-content: center;
+  height: 120vh;
+  justify-content: flex-start:
+  align-content:
   background: rgba(0, 0, 0, 0.01);
   color: #fff;
   overflow: hidden;
   position: relative;
   transition: 0.2s ease-in-out;
 
-  margin-top: 10vh;
+
 
   @media (max-width: 768px) {
     width: 100%;
@@ -21,7 +22,7 @@ const CardContainer = styled.div`
 
 const ImageWraper = styled.div`
   background-color: black;
-  height: 80vh;
+  height: 100vh;
   width: 100%;
   background-image: url(${(props) => props.backImg});
   background-color: #ff0034; /* Color concreto que deseas aplicar */
@@ -32,23 +33,14 @@ const ImageWraper = styled.div`
   background-attachment: fixed;
 
   background-size: cover;
-  background-position: 55% 25%;
-  clip-path: polygon(
-    67% 0,
-    43% 20%,
-    100% 0,
-    100% 78%,
-    34% 100%,
-    55% 71%,
-    0 100%,
-    0 22%
-  );
+  background-position: 55% 65%;
+  clip-path: polygon(51% 0, 100% 0, 100% 94%, 55% 100%, 75% 84%, 0 100%, 0 0);
 `;
 
 const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center; /* Añadido: Centra los elementos horizontalmente */
+  align-items: flex-end; /* Añadido: Centra los elementos horizontalmente */
   justify-content: center;
   bottom: 0;
   left: 0;
@@ -59,16 +51,25 @@ const TitleContainer = styled.div`
   margin-bottom: 25vh;
 `;
 
-const Title = styled.h2`
-  margin-top: 26vh;
-  font-size: 6vh;
+const Title = styled.h1`
+
+  margin-top: 66vh;
+  font-size: 7vh;
+width:100%;
+text-align:right;
+margin-right:5vw;
+  @media (max-width: 768px) {
+    font-size:6.6vw
+  }
 `;
 
 const Description = styled.h4`
   font-size: 2vh;
   margin-top: -4vh;
   min-width: 100vw;
-  text-align: center;
+  width:100%;
+text-align:right;
+margin-right:5vw;
 `;
 
 const Button = styled.button`
@@ -80,6 +81,7 @@ background: rgba(0, 0, 0, 0.01);
 color: white;
 font-size:2vh;
 cursor: pointer;
+margin-right:5vw;
 
 &:hover {
     cursor: pointer;
@@ -92,7 +94,7 @@ cursor: pointer;
 
 `;
 
-const MainElement = ({ title, description, backImg, textButton }) => {
+const HeaderTop = ({ title, description, backImg, textButton }) => {
   return (
     <CardContainer>
       <ImageWraper backImg={backImg}>
@@ -106,4 +108,4 @@ const MainElement = ({ title, description, backImg, textButton }) => {
   );
 };
 
-export default MainElement;
+export default HeaderTop;
